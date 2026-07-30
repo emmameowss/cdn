@@ -70,6 +70,6 @@ app.get('/', (req,res) => {
   });
 });
 
-app.listen(PORT, () => {
+app.listen(port, () => {
   console.log(`cdn™ is running on port ${port}`);
 })
