@@ -8,12 +8,12 @@ const app = express()
 const port = process.env.PORT || 3000
 const uploadsDir = path.join(__dirname, 'uploads')
 
-if (!existsSync(uploadsDir)) {
-  mkdirSync(uploadsDir, { recursive: true });
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
 }
 
 function generateRandomString(length = 16) {
-  return randomBytes(length).toString('hex');
+  return crypto.randomBytes(length).toString('hex');
 }
 
 const storage = multer.diskStorage({
