@@ -6,7 +6,7 @@ const crypto = require('crypto');
 
 const app = express()
 const port = process.env.PORT || 3000
-const uploadsDir = join(__dirname, 'uploads')
+const uploadsDir = path.join(__dirname, 'uploads')
 
 if (!existsSync(uploadsDir)) {
   mkdirSync(uploadsDir, { recursive: true });
